@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -90,7 +90,7 @@
           xhr.onreadystatechange = function () {
             if (xhr.readyState === 4 && xhr.status === 200) {
               var response = JSON.parse(xhr.responseText); // Parse JSON response
-              document.getElementById("response").innerHTML = `${document.getElementById("numberInput2").value}Tk<br> ID:   ${response.id} <br>Submited:  ${response.result}`;
+              document.getElementById("response").innerHTML = `${document.getElementById("optionList").value} <i>(${document.getElementById("inputBox23").value+")</i> :"+document.getElementById("numberInput2").value}Tk<br> ID:   ${response.id} <br>Submited:  ${response.result}`;
 
               document.getElementById("myForm").reset(); // Reset the form
               document.getElementById("submit").style.display="";
