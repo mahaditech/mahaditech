@@ -68,6 +68,8 @@
         <input type="number" id="numberInput2" name="numberInput2" min="1" required>
         <label for="inputBox23">Note:</label>
         <input type="text" id="inputBox23" name="textInput23">
+        <label for="othernote">Other Note:</label>
+        <input type="text" id="othernote" name="othernote">
         
         
 
@@ -81,7 +83,7 @@
         function sendRequest() {
           var xhr = new XMLHttpRequest();
           var url = "https://script.google.com/macros/s/AKfycbyBzTHSOA2ueIrmok6j1slzJfyQRyonjBRdHbmRd2b5XheLyWH0GkvWBGUqqUu7QEObKA/exec"; // Replace with your server endpoint URL
-          var data = "name=" + encodeURIComponent(document.getElementById("optionList").value)+"&amount="+encodeURIComponent(document.getElementById("numberInput2").value)+"&details="+encodeURIComponent(document.getElementById("inputBox23").value); // Get input value
+          var data = "name=" + encodeURIComponent(document.getElementById("optionList").value)+"&amount="+encodeURIComponent(document.getElementById("numberInput2").value)+"&details="+encodeURIComponent(document.getElementById("inputBox23").value)+"&othernote="+encodeURIComponent(document.getElementById("othernote").value);; // Get input value
     
           xhr.open("POST", url, true);
           xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
